@@ -192,6 +192,11 @@ p {
 .header nav a:hover {
   color: lightgray;
 }
+@media (max-width: 500px) {
+  .header nav a {
+    margin: 0 30px 0 0;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -201,6 +206,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 .home .intro img {
   width: 100%;
@@ -225,6 +231,21 @@ footer {
   border-radius: 20px;
   height: 100%;
 }
+@media (max-width: 500px) {
+  .home .space-images img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .sky {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .launch {
+    display: none;
+  }
+}
 .home .visit-planets {
   padding: 15px;
 }
@@ -241,8 +262,24 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 20px 20px;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -252,8 +289,8 @@ footer {
 }
 .home .walk .walk-text .btn {
   background-color: #22283A;
-  color: #F6F7F8;
   font-size: 1.8rem;
+  color: white;
   cursor: pointer;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -263,11 +300,25 @@ footer {
 }
 .home .walk .walk-text .btn:hover {
   background-color: #F6F6F6;
-  color: #23293B;
+  color: #22283A;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    padding: 25px;
+    width: 100%;
+  }
 }
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    margin-left: 0;
+    order: 1;
+    margin-bottom: 20px;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;
