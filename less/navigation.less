@@ -1,7 +1,10 @@
 // Navigation code here
 
 .outer {
-	background-color: @nav-bg;
+    background-color: rgba(246, 246, 246, 0.85);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .header {
@@ -31,7 +34,8 @@
 			}
 
 			&:hover {
-				color: lightgray;
+                background-color: @btn-bg-color;
+                color: @nav-bg;
             }
                         
             @media @phone {

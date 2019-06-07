@@ -161,7 +161,10 @@ p {
   margin: 0 auto;
 }
 .outer {
-  background-color: #F6F6F6;
+  background-color: rgba(246, 246, 246, 0.85);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .header {
   display: flex;
@@ -190,7 +193,8 @@ p {
   margin: 0 10px 0 0;
 }
 .header nav a:hover {
-  color: lightgray;
+  background-color: #22283A;
+  color: #F6F6F6;
 }
 @media (max-width: 500px) {
   .header nav a {
@@ -207,6 +211,9 @@ footer {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+}
+.home {
+  padding-top: 116px;
 }
 .home .intro img {
   width: 100%;
