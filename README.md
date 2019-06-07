@@ -33,14 +33,33 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the difference between an adaptive website and a fully responsive website?
+    - An adaptive website may have hard coded pixels used for layout using media queries for different devices. But it still lacks in accommodating for thousands of devices because care was only given to specific designs at certain break points.
+    - A responsive website use media queries with responsive units such as `em`, `rem`, `%` rather than fixed unit like `px`. You get an experience that looks and functions beautifully across thousands of devices and screen sizes.
 
 2. Describe what it means to be mobile first vs desktop first.
+    - Mobile first implies you will design and code for a mobile device first and expand layour or features as you gain more screen space toward desktop. 
+        - Mobile first uses media queries with `min-width` and going up to larger resolution.
+        - Some of developer prefer this way because mobile layout is usually to stack contents into one column so it doesn't require other design perspective.
+    - Desktop first implies you build a website for the highest specs to display and communicate as much as possible. It often requires the desktop experience that needs to be detailed and dynamic.
+        - Desktop first uses media queries with `max-width` and going down to smaller resolutions. It means hiding and wrapping elements while trying to support as many original features as possible. 
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
+    - Usually default font-size of the browser is 16px. Setting font-size: 100% will make 1rem = 16px. But it will make calculations a little difficult. A better way is to set font-size: 62.5%. Because 62.5% of 16px is 10px. Which makes 1rem = 10px.
 
 4. How would you describe preprocessing to someone new to CSS?
+    - A preprocessing is a program that lets you generate CSS from the preprocessor's own unique syntax.
+        - It gives more CSS functionality using a features that don't exist in CSS, such as nesting, variables, and mixins, and so on.
+        - One of disadvantages in CSS is that you need to add rules and overwritte rules later for subtle change over and over. Preprocessing solves this probelm.
+        - `LESS`, `Sass`, `Stylus`, `PostCSS`
 
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+    - `Parametric mixin`: If it is something that you are writing over and over in your file, it would be a good case for a mixin to save writing the code multiple times.
+    - Generally speaking, I don't really have a trouble for concepts in preprocessing. But I think the syntax is little confusing and I had to check several times to make sure it's working.
+        - Variable: `@variable-name: #FF0000;`
+        - Mixin: `.some-class {  color: red  };`  `.example-mixin {  width: 75%;  .some-class();  }`
+        - Parametric mixins: `.custom-layout(@justify, @align){  display: flex;	justify-content: @justify;	align-items: @align;}`
+        - Functions: `{  darken(teal, 5%)  }`
+        - Escaping: `@tablet: ~"(min-width: 500px)"`
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
